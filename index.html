@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "assets/index.c07acd11.css">
+    <script>
+        function start() {
+            document.getElementById('start').className = "hidden";
+            document.getElementById('head').className = "text-center text-xl font-semibold p-2 m-1 rounded-sm hover:scale-105 hover:transition-all hover:duration-1000";
+
+            document.getElementById('planetsdata').className = "flex flex-col sm:flex-row my-2 sm:flex-wrap sm:w-5/6 m-auto lg:flex-row lg:flex-wrap lg:w-11/12";
+            document.body.className = "bg-white w-screen";
+            document.getElementById('input').className = "w-full text-center  border-2 border-black text-sm"
+        }
+        function popup() {
+            popups = document.getElementById('popup').value
+        }
+
+
+        function changeMercury() {
+            let weight = document.getElementById('input').value;
+            let weightnum = Number(weight);
+            let Mercury = 0.38;
+            let weightOfMercury = weightnum * Mercury;
+
+            document.getElementById('popup').innerHTML = weightOfMercury;
+            document.getElementById('popup').className = "bg-black opacity-60 text-white rounded-lg h-8 w-8/12 sm:w-6/12 md:w-5/12 lg:w-4/12 xl:w-4/12 2xl:w-1/6  text-center m-auto ";
+        }
+        function changeVenus() {
+            let weight = document.getElementById('input').value;
+            let weightnum = Number(weight);
+            let Venus = 0.91;
+            let weightOfVenus = weightnum * Venus;
+
+            document.getElementById('popup').innerHTML = weightOfVenus;
+            document.getElementById('popup').className = "bg-black opacity-60 text-white rounded-lg h-8 w-8/12 sm:w-6/12 md:w-5/12 lg:w-4/12 xl:w-4/12 2xl:w-1/6  text-center m-auto ";
+        }
+        function changeEarth() {
+            {
+                let weight = document.getElementById('input').value;
+                let weightnum = Number(weight);
+                document.getElementById('popup').innerHTML = weightnum;
+                document.getElementById('popup').className = "bg-black opacity-60 text-white rounded-lg h-8 w-8/12 sm:w-6/12 md:w-5/12 lg:w-4/12 xl:w-4/12 2xl:w-1/6  text-center m-auto ";
+            }
+        }
+        function changeMars() {
+            let weight = document.getElementById('input').value;
+            let weightnum = Number(weight);
+            let Mars = 0.375;
+            let weightOfMars = weightnum * Mars;
+
+            document.getElementById('popup').innerHTML = weightOfMars;
+            document.getElementById('popup').className = "bg-black opacity-60 text-white rounded-lg h-8 w-8/12 sm:w-6/12 md:w-5/12 lg:w-4/12 xl:w-4/12 2xl:w-1/6  text-center m-auto ";
+        }
+        function changeJupiter() {
+            let weight = document.getElementById('input').value;
+            let weightnum = Number(weight);
+            let Jupiter = 2.4;
+            let weightOfJupiter = weightnum * Jupiter;
+
+            document.getElementById('popup').innerHTML = weightOfJupiter;
+            document.getElementById('popup').className = "bg-black opacity-60 text-white rounded-lg h-8 w-8/12 sm:w-6/12 md:w-5/12 lg:w-4/12 xl:w-4/12 2xl:w-1/6  text-center m-auto ";
+        }
+        function changeSaturn() {
+            let weight = document.getElementById('input').value;
+            let weightnum = Number(weight);
+            let Saturn = 1.07;
+            let weightOfSaturn = weightnum * Saturn;
+
+            document.getElementById('popup').innerHTML = weightOfSaturn;
+            document.getElementById('popup').className = "bg-black opacity-60 text-white rounded-lg h-8 w-8/12 sm:w-6/12 md:w-5/12 lg:w-4/12 xl:w-4/12 2xl:w-1/6  text-center m-auto ";
+        }
+        function changeUranus() {
+            let weight = document.getElementById('input').value;
+            let weightnum = Number(weight);
+            let Uranus = 0.86;
+            let weightOfUranus = weightnum * Uranus;
+
+            document.getElementById('popup').innerHTML = weightOfUranus;
+            document.getElementById('popup').className = "bg-black opacity-60 text-white rounded-lg h-8 w-8/12 sm:w-6/12 md:w-5/12 lg:w-4/12 xl:w-4/12 2xl:w-1/6  text-center m-auto ";
+        }
+        function changeNeptune() {
+            let weight = document.getElementById('input').value;
+            let weightnum = Number(weight);
+            let Neptune = 1.10;
+            let weightOfNeptune = weightnum * Neptune;
+
+            document.getElementById('popup').innerHTML = weightOfNeptune;
+            document.getElementById('popup').className = "bg-black opacity-60 text-white rounded-lg h-8 w-8/12 sm:w-6/12 md:w-5/12 lg:w-4/12 xl:w-4/12 2xl:w-1/6  text-center m-auto ";
+        }
+
+
+
+    </script>
+
+    
+
+
+
+    <title></title>
+  <link rel="stylesheet" href="/assets/index.c07acd11.css">
+</head>
+
+<body class="bg-black">
+    <div class="flex justify-center items-center h-screen" id="start"> <button
+            class="bg-white rounded-2xl p-4 shadow-lg shadow-slate-300 hover:scale-110 hover:transition-all hover:duration-700 font-semibold text-sm"
+            onclick="start()">What is your weight on other planets</button>
+    </div>
+
+
+    <div class="w-4/5 border-2 border-black m-auto">
+        <input type="text" placeholder=" Enter your weight in KG here.." class="hidden" id="input">
+    </div>
+    <div class="hidden" id="head">Weight Converter</div>
+    <div class="hidden" id="planetsdata">
+
+        <div class="text-center p-1  hover:shadow-md m-auto hover:shadow-slate-600 hover:scale-110 hover:transition-all hover:duration-500 text-black rounded-md w-4/5 sm:w-2/5 lg:w-1/4 xl:w-1/4 2xl:w-1/4 text-sm my-2 cursor-pointer"
+            id="Mercury" onclick="changeMercury()">
+            <div>Mercury</div>
+        </div>
+        <div class="text-center p-1  hover:shadow-md m-auto hover:shadow-slate-600 hover:scale-110 hover:transition-all hover:duration-500 text-black rounded-md w-4/5 sm:w-2/5 lg:w-1/4 xl:w-1/4 2xl:w-1/4 text-sm my-2 cursor-pointer"
+            id="Venus" onclick="changeVenus()">
+            <div>Venus</div>
+
+        </div>
+        <div class="text-center p-1  hover:shadow-md m-auto hover:shadow-slate-600 hover:scale-110 hover:transition-all hover:duration-500 text-black rounded-md w-4/5 sm:w-2/5 lg:w-1/4 xl:w-1/4 2xl:w-1/4 text-sm my-2 cursor-pointer"
+            id="Earth" onclick="changeEarth()">
+            <div>Earth</div>
+        </div>
+        <div class="text-center p-1  hover:shadow-md m-auto hover:shadow-slate-600 hover:scale-110 hover:transition-all hover:duration-500 text-black rounded-md w-4/5 sm:w-2/5 lg:w-1/4 xl:w-1/4 2xl:w-1/4 text-sm my-2 cursor-pointer"
+            id="Mars" onclick="changeMars()">
+            <div>Mars</div>
+
+        </div>
+
+        <div class="text-center p-1  hover:shadow-md m-auto hover:shadow-slate-600 hover:scale-110 hover:transition-all hover:duration-500 text-black rounded-md w-4/5 sm:w-2/5 lg:w-1/4 xl:w-1/4 2xl:w-1/4 text-sm my-2 cursor-pointer"
+            id="Jupiter" onclick="changeJupiter()">
+            <div>Jupiter</div>
+        </div>
+
+        <div class="text-center p-1  hover:shadow-md m-auto hover:shadow-slate-600 hover:scale-110 hover:transition-all hover:duration-500 text-black rounded-md w-4/5 sm:w-2/5 lg:w-1/4 xl:w-1/4 2xl:w-1/4 text-sm my-2 cursor-pointer"
+            id="Saturn" onclick="changeSaturn()">
+            <div>Saturn</div>
+        </div>
+
+        <div class="text-center p-1  hover:shadow-md m-auto hover:shadow-slate-600 hover:scale-110 hover:transition-all hover:duration-500 text-black rounded-md w-4/5 sm:w-2/5 lg:w-1/4 xl:w-1/4 2xl:w-1/4 text-sm my-2 cursor-pointer"
+            id="Uranus" onclick="changeUranus()">
+            <div>Uranus</div>
+
+        </div>
+        <div class="text-center p-1  hover:shadow-md m-auto hover:shadow-slate-600 hover:scale-110 hover:transition-all hover:duration-500 text-black rounded-md w-4/5 sm:w-2/5 lg:w-1/4 xl:w-1/4 2xl:w-1/4 text-sm my-2 cursor-pointer"
+            id="Neptune" onclick="changeNeptune()">
+            <div>Neptune</div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="hidden" id="popup"> </div>
+
+
+
+</body>
+
+</html>
